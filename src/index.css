@@ -1,0 +1,268 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Theme variables */
+:root {
+  /* Dark mode (default) */
+  --app-bg: #1e293b; /* navy-800 */
+  --surface-top: #334155; /* navy-700 */
+  --surface-bottom: #1e293b; /* navy-800 */
+  --section-bg: rgba(51, 65, 85, 0.3); /* navy-700/30 */
+  --section-bg-alt: #0f172a; /* navy-900 - darker alternative section */
+  --nav-bg: rgba(30,41,59,.95);
+  --nav-border: #334155; /* navy-700 */
+  --nav-fg: #e5e7eb; /* gray-200 */
+  --nav-hover: #f3f4f6; /* gray-100 */
+  --hero-from: #1e293b;
+  --hero-to: #334155;
+  --text-primary: #ffffff;
+  --text-secondary: #d1d5db; /* gray-300 */
+  --text-muted: #9ca3af; /* gray-400 */
+  --border-color: rgba(250, 204, 21, 0.3); /* gold-500/30 */
+  --border-hover: rgba(253, 230, 138, 0.5); /* gold-300/50 */
+  --badge-bg: #1e293b;
+  --badge-border: rgba(250, 204, 21, 0.3);
+}
+
+body.light {
+  /* Light mode */
+  --app-bg: #f8fafc; /* slate-50 */
+  --surface-top: #ffffff;
+  --surface-bottom: #f8fafc; /* slate-50 - lighter for better distinction */
+  --section-bg: rgba(241, 245, 249, 0.8); /* slate-100/80 */
+  --section-bg-alt: #e2e8f0; /* slate-200 - visible alternative section */
+  --nav-bg: rgba(255,255,255,.95);
+  --nav-border: #e2e8f0; /* slate-200 */
+  --nav-fg: #1e293b; /* slate-800 */
+  --nav-hover: #334155; /* slate-700 */
+  --hero-from: #f0f9ff; /* sky-50 */
+  --hero-to: #e0f2fe;  /* sky-100 */
+  --text-primary: #1e293b; /* slate-800 */
+  --text-secondary: #475569; /* slate-600 */
+  --text-muted: #64748b; /* slate-500 */
+  /* Light theme gold accents for all bordered components */
+  --border-color: rgba(250, 204, 21, 0.35); /* gold-500/35 */
+  --border-hover: rgba(250, 204, 21, 0.55); /* stronger gold on hover */
+  --badge-bg: #f1f5f9;
+  --badge-border: rgba(250, 204, 21, 0.35);
+}
+
+@layer base {
+  body {
+    background-color: var(--app-bg);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 16px; /* Increased base font */
+    line-height: 1.6; /* Better readability */
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20;
+  }
+
+  .section-title {
+    @apply text-2xl md:text-3xl font-bold text-center mb-8 bg-gradient-to-r from-electric-400 to-cyan-400 bg-clip-text text-transparent;
+  }
+
+  /* Surface helpers */
+  .bg-app { background-color: var(--app-bg); }
+  .section-surface { background-color: var(--section-bg); }
+  .section-surface-alt { background-color: var(--section-bg-alt); }
+  .hero-bg { background: linear-gradient(to bottom, var(--hero-from), var(--hero-to)); }
+
+  /* Accent top border utility for any container */
+  .accent-top {
+    border-top-width: 4px !important;
+    border-top-color: var(--border-hover) !important;
+  }
+
+  /* Card uses theme surfaces with proper text colors */
+  .card {
+    background: linear-gradient(180deg, var(--surface-top), var(--surface-bottom));
+    border-color: var(--border-color);
+    color: var(--text-primary);
+    @apply rounded-lg p-4 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border;
+    /* Thicker, accented top border for both themes */
+    border-top-width: 4px;
+    border-top-color: var(--border-hover);
+  }
+  
+  .card:hover {
+    border-color: var(--border-hover);
+  }
+
+  /* Text color utilities */
+  .text-themed-primary { color: var(--text-primary) !important; }
+  .text-themed-secondary { color: var(--text-secondary) !important; }
+  .text-themed-muted { color: var(--text-muted) !important; }
+
+  /* Buttons */
+  .btn-primary {
+    @apply bg-gradient-to-r from-electric-500 to-cyan-500 text-white px-5 py-2.5 rounded-lg font-semibold hover:from-electric-600 hover:to-cyan-600 transition-all duration-300 inline-flex items-center gap-2 text-sm min-h-[44px];
+  }
+
+  .btn-secondary {
+    @apply px-5 py-2.5 rounded-lg font-semibold transition-all duration-300 inline-flex items-center gap-2 text-sm min-h-[44px];
+    background-color: var(--surface-top);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    /* Optional accent top for buttons that look like boxes */
+    border-top-width: 3px;
+    border-top-color: var(--border-hover);
+  }
+  
+  .btn-secondary:hover {
+    border-color: var(--border-hover);
+    transform: translateY(-1px);
+  }
+
+  /* Navbar styled via variables */
+  .app-navbar { 
+    background-color: var(--nav-bg); 
+    border-color: var(--nav-border); 
+    color: var(--nav-fg);
+  }
+  
+  .app-navbar .nav-link { 
+    color: var(--nav-fg); 
+    transition: color 0.2s ease;
+  }
+  
+  .app-navbar .nav-link:hover { 
+    color: var(--nav-hover); 
+  }
+  
+  .app-navbar .menu-surface:hover { 
+    background: var(--section-bg); 
+  }
+
+  /* Theme toggle button */
+  .theme-toggle {
+    background-color: var(--surface-top);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+  }
+  
+  .theme-toggle:hover {
+    border-color: var(--border-hover);
+  }
+}
+
+html { scroll-behavior: smooth; }
+* { box-sizing: border-box; }
+
+/* Global focus-visible styles for accessibility */
+:where(a, button, [role="button"], .card):focus-visible {
+  outline: 2px solid #0ea5e9; /* electric-500 */
+  outline-offset: 2px;
+}
+
+/* Light mode specific overrides */
+body.light .text-gray-300 { color: var(--text-secondary) !important; }
+body.light .text-gray-400 { color: var(--text-muted) !important; }
+body.light .text-gray-500 { color: var(--text-muted) !important; }
+body.light .text-white { color: var(--text-primary) !important; }
+
+/* Ensure proper contrast for tech stack badges in Projects */
+body.light .bg-electric-500\/20 { 
+  @apply bg-electric-100 text-electric-700 border-electric-300;
+}
+
+body.light .border-electric-500\/30 {
+  @apply border-electric-400;
+}
+
+body.light .text-electric-600 {
+  @apply text-electric-700;
+}
+
+body.light .hover\:bg-electric-500\/30:hover {
+  @apply bg-electric-200;
+}
+
+/* Light mode card improvements */
+body.light .card {
+  @apply shadow-sm border;
+  background: white;
+  border-color: var(--border-color);
+}
+
+body.light .card:hover {
+  @apply shadow-md;
+  border-color: var(--border-hover);
+}
+
+/* Light mode green badges in Hero and Projects */
+body.light .bg-green-500\/20 {
+  @apply bg-green-50 border-green-200;
+}
+
+body.light .border-green-500\/30 {
+  @apply border-green-300;
+}
+
+body.light .text-green-600 {
+  @apply text-green-700;
+}
+
+body.light .from-green-500\/20 {
+  @apply from-green-50;
+}
+
+body.light .to-emerald-500\/20 {
+  @apply to-emerald-50;
+}
+
+/* Light mode gradient adjustments */
+body.light .from-yellow-500 {
+  @apply from-yellow-600;
+}
+
+body.light .to-orange-500 {
+  @apply from-orange-600;
+}
+
+body.light .from-green-500 {
+  @apply from-green-600;
+}
+
+body.light .to-emerald-500 {
+  @apply to-emerald-600;
+}
+
+/* Light mode hover states for project cards */
+body.light .hover\:border-electric-500\/50:hover {
+  @apply border-electric-500;
+}
+
+/* Light mode shadow for buttons and badges */
+body.light .shadow-green-500\/25 {
+  @apply shadow-green-500/50;
+}
+
+/* Legacy light mode overrides - keeping for compatibility */
+body.light .bg-navy-600 {
+  @apply bg-slate-200 text-slate-800;
+}
+
+body.light .bg-navy-600:hover {
+  @apply bg-slate-300;
+}
+
+body.light .bg-navy-500 {
+  @apply bg-slate-300 text-slate-800;
+}
+
+body.light .border-navy-600 {
+  @apply border-slate-300;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .card, .btn-primary, .btn-secondary { transition: none !important; }
+  .animate-pulse, .animate-bounce, .animate-ping { animation: none !important; }
+  .group:hover .group-hover\:scale-110 { transform: none !important; }
+}

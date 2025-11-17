@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>Ayanda Sokhela Portfolio</title>
+  <defs>
+    <linearGradient id="shieldGrad" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0ea5e9"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+  </defs>
+  <!-- Zulu shield stylised -->
+  <ellipse cx="32" cy="32" rx="20" ry="28" fill="url(#shieldGrad)" stroke="#facc15" stroke-width="2"/>
+  <!-- Vertical pattern representing heritage (umkhonto lacing) -->
+  <path d="M32 8 L32 56" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+  <path d="M24 12 L40 12 M24 20 L40 20 M24 28 L40 28 M24 36 L40 36 M24 44 L40 44 M24 52 L40 52" stroke="#facc15" stroke-width="2" stroke-linecap="round"/>
+  <!-- Spear simplified -->
+  <path d="M50 6 L54 2 L58 6 L58 42" fill="#64748b" stroke="#facc15" stroke-width="1"/>
+  <circle cx="54" cy="46" r="4" fill="#0f172a" stroke="#facc15" stroke-width="1"/>
+</svg>
