@@ -38,7 +38,7 @@ export const projects = [
   {
     id: 5,
     title: "HR Employee Offboarding Checklist System",
-    summary: "Built to reduce risk from unmanaged exits—missed asset recoveries, access not revoked, and unclear cross-department accountability. Enterprise-grade multi-department offboarding workflow with role-based tasks, progress tracking, audit trails, automated email reminders via background services, document management system, RESTful API with Swagger docs, Chart.js analytics dashboards, and CSV/JSON exports. Supports Human Capital, IT, Finance, and Payroll departments. Impact: consistent offboarding, timely access revocation and asset recovery, and audit-ready records.",
+    summary: "Built to reduce risk from unmanaged exitsâ€”missed asset recoveries, access not revoked, and unclear cross-department accountability. Enterprise-grade multi-department offboarding workflow with role-based tasks, progress tracking, audit trails, automated email reminders via background services, document management system, RESTful API with Swagger docs, Chart.js analytics dashboards, and CSV/JSON exports. Supports Human Capital, IT, Finance, and Payroll departments. Impact: consistent offboarding, timely access revocation and asset recovery, and audit-ready records.",
     techStack: [".NET 8", "MVC", "Razor Pages", "SQL Server", "EF Core", "Chart.js", "RESTful API", "Background Services"],
     github: "https://github.com/AyaSox/hr-offboarding-checklist",
     demo: "https://hr-offboarding-checklist.onrender.com",
@@ -65,7 +65,7 @@ export const projects = [
   {
     id: 8,
     title: "Lenda Kahle Micro-Lending Platform",
-    summary: "FinTech micro-lending platform addressing the South African access-to-credit gap — many citizens struggle to obtain affordable, compliant finance. NCA-compliant platform with loan calculator, affordability assessment, application workflow with document upload (PDF/images up to 30MB), approval management, repayment tracking, admin dashboard, audit logging, real-time SignalR notifications, and email alerts. Impact: faster, transparent credit decisions with auditable workflows, improving trust and reducing manual processing time. Split-stack deployment with Dockerised backend on Render and React frontend on Vercel.",
+    summary: "FinTech micro-lending platform addressing the South African access-to-credit gapâ€”many citizens struggle to obtain affordable, compliant finance. NCA-compliant platform with loan calculator, affordability assessment, application workflow with document upload (PDF/images up to 30MB), approval management, repayment tracking, admin dashboard, audit logging, real-time SignalR notifications, and email alerts. Impact: faster, transparent credit decisions with auditable workflows, improving trust and reducing manual processing time. Split-stack deployment with Dockerised backend on Render and React frontend on Vercel.",
     techStack: [".NET 8 Web API", "React", "TypeScript", "PostgreSQL", "JWT", "SignalR", "Material-UI", "Docker", "Vercel"],
     github: "https://github.com/AyaSox/microlending-api",
     demo: "https://lenda-kahle-app.vercel.app",
