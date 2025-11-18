@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { projects } from '../data/portfolioData';
 
 function parseSummary(summary) {
-  // Splits on 'Impact:' to render impact bullets separately
+  
   const [desc, impactPart] = summary.split('Impact:');
   const impactItems = impactPart
     ? impactPart.split(',').map(s => s.trim()).filter(Boolean)
@@ -73,7 +73,7 @@ function Projects() {
 
               {impacts.length > 0 && (
                 <div className="mb-3">
-                  <h4 className="text-xs font-semibold text-themed-muted mb-1.5">Impact</h4>
+                  <h4 className="text-xs font-semibold text-themed-muted mb-1.5">Impact:</h4>
                   <ul className="list-disc pl-5 space-y-1 text-sm text-themed-secondary">
                     {impacts.map((it, i) => (
                       <li key={i}>{it}</li>
