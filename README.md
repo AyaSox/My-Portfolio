@@ -1,4 +1,4 @@
-# Ayanda Sokhela – Portfolio
+# Ayanda Sokhela â€“ Portfolio
 
 A modern, responsive portfolio showcasing HR domain expertise combined with full?stack .NET and React development.
 
@@ -8,7 +8,7 @@ A modern, responsive portfolio showcasing HR domain expertise combined with full
 This site presents my professional background, technical skills, and full?stack projects (HR systems, ATS, resource booking, offboarding workflow, finance & family productivity apps, and fintech micro?lending). Designed for clarity, accessibility, and fast load using Vite + Tailwind.
 
 ## Live Demo
-Example deployment: https://ayanda-sokhela.vercel.app
+Example deployment: https://ayandasportfolio.netlify.app
 
 ## Built With
 - React 19 + Vite
@@ -26,14 +26,14 @@ Example deployment: https://ayanda-sokhela.vercel.app
 
 ## Project Highlights
 Featured systems solving real HR / business problems:
-1. HR Management System – unified employee data, reporting, analytics.
-2. ESS Leave System – BCEA?compliant leave with workflow & notifications.
-3. Resource Booking System – conflict detection & utilisation visibility.
-4. Recruitment ATS – SA Employment Equity aware pipeline & reporting.
-5. Offboarding Checklist – multi?department exit risk mitigation.
-6. FamBudget – household finance tracking & budgeting.
-7. FamTrack – family task & reminder automation.
-8. Micro?Lending Platform – NCA?aligned loan workflow & real?time notifications.
+1. HR Management System â€“ unified employee data, reporting, analytics.
+2. ESS Leave System â€“ BCEA?compliant leave with workflow & notifications.
+3. Resource Booking System â€“ conflict detection & utilisation visibility.
+4. Recruitment ATS â€“ SA Employment Equity aware pipeline & reporting.
+5. Offboarding Checklist â€“ multi?department exit risk mitigation.
+6. FamBudget â€“ household finance tracking & budgeting.
+7. FamTrack â€“ family task & reminder automation.
+8. Micro?Lending Platform â€“ NCA?aligned loan workflow & real?time notifications.
 
 ## Tech Stack Summary
 Backend / APIs: .NET 8, ASP.NET Core, EF Core, REST, JWT  
@@ -63,10 +63,7 @@ netlify.toml         # Netlify deployment configuration
 - Meta tags & canonical link
 - Open Graph & Twitter cards
 - JSON?LD (Person + Website) in index.html
-
-## Customisation
-Edit project data in `src/data/portfolioData.js` and theme variables in `src/index.css`.
-
+  
 ## Contact
 Email: ayandasokhela492@gmail.com  
 LinkedIn: https://www.linkedin.com/in/ayanda-sokhela-20283b11b/  
@@ -76,5 +73,3 @@ Location: Gauteng, South Africa
 ## License
 MIT License. See LICENSE (add if not present).
 
----
-*Bridging HR expertise with modern technology.*
