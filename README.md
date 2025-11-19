@@ -8,7 +8,7 @@ A modern, responsive portfolio showcasing HR domain expertise combined with full
 This site presents my professional background, technical skills, and full?stack projects (HR systems, ATS, resource booking, offboarding workflow, finance & family productivity apps, and fintech micro?lending). Designed for clarity, accessibility, and fast load using Vite + Tailwind.
 
 ## Live Demo
-Example deployment: https://ayandasportfolio.netlify.app
+https://my-portfolio-ayanda-sokhelas-projects.vercel.app
 
 ## Built With
 - React 19 + Vite
