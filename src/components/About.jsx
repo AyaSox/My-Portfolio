@@ -114,14 +114,26 @@ function About() {
                 })}
               </div>
 
-              {/* Quick Facts */}
+              {/* Quick Facts - NOW DYNAMIC */}
               <div className="mt-8 pt-6 border-t border-[var(--border-color)]">
                 <h4 className="text-lg font-semibold text-themed-primary mb-4">Quick Facts</h4>
                 <div className="space-y-3 text-sm">
-                  <div className="flex justify-between"><span className="text-themed-muted">Location:</span><span className="text-themed-secondary">Gauteng, SA</span></div>
-                  <div className="flex justify-between"><span className="text-themed-muted">Languages:</span><span className="text-themed-secondary">English, IsiZulu</span></div>
-                  <div className="flex justify-between"><span className="text-themed-muted">Availability:</span><span className="text-green-500">1 Month Notice</span></div>
-                  <div className="flex justify-between"><span className="text-themed-muted">Work Authorisation:</span><span className="text-themed-secondary">South African Citizen</span></div>
+                  <div className="flex justify-between">
+                    <span className="text-themed-muted">Location:</span>
+                    <span className="text-themed-secondary">{about.location}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-themed-muted">Languages:</span>
+                    <span className="text-themed-secondary">{about.languages.join(', ')}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-themed-muted">Availability:</span>
+                    <span className="text-green-500">{about.availability}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-themed-muted">Nationality:</span>
+                    <span className="text-themed-secondary">{about.nationality}</span>
+                  </div>
                 </div>
               </div>
             </div>
