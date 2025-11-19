@@ -140,7 +140,7 @@ export const education = [
   },
   {
     id: 2,
-    degree: "SAP SuccessFactors Certification",
+    degree: "SAP SuccessFactors",
     institution: "SAP",
     year: "2024",
     subjects: ["Configuring SAP SuccessFactors Employee Central Core", "Exploring SAP SuccessFactors Solutions", "SAP SuccessFactors Platform"],
