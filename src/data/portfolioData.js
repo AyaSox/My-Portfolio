@@ -74,7 +74,7 @@ export const projects = [
 ];
 
 export const skills = {
-  backend: [".NET 8", "ASP.NET Core", "REST APIs", "C#", "Entity Framework Core"],
+  backend: [".NET 8", "ASP.NET Core", "REST APIs", "C#", "Java", "Entity Framework Core"],
   frontend: ["React", "JavaScript", "TypeScript", "HTML5", "CSS3", "Bootstrap"],
   databases: ["SQL Server", "PostgreSQL", "SQLite"],
   tools: ["Visual Studio 2022", "IntelliJ IDEA", "GitHub", "Docker", "SAP HCM", "Hangfire"],
@@ -135,7 +135,7 @@ export const education = [
     degree: "Bachelor of Technology in Information & Technology Management",
     institution: "MANCOSA",
     year: "2024",
-    subjects: ["Computer Programming", "Database Design & Management", "Software Engineering", "Systems Analysis & Design", "Information Systems", "IT Management", "Business Statistics"],
+    subjects: ["Computer Programming", "Database Design & Management", "Software Engineering", "Systems Analysis & Design", "Information Systems", "IT Management", "Financial Reporting & Analysis", "Business Statistics"],
     achievements: []
   },
   {
