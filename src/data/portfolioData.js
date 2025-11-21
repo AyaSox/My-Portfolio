@@ -175,7 +175,6 @@ My experience spans the education sector (University of KwaZulu-Natal) and Infor
 I am passionate about using technology to create solutions that make work easier and more efficient. This drive led me to develop 8 full-stack applications, including HR management systems, ATS platforms, and resource booking solutions using .NET, React, and SQL technologies. Six of my applications are deployed and accessible via live demos.
 
 I am looking for opportunities to use my technical skills and passion for technology to help build, support, and improve systems and processes in IT and business, while leveraging my extensive HR domain knowledge.`,
-  email: "ayandasokhela492@gmail.com",
   linkedin: "https://www.linkedin.com/in/ayanda-sokhela-20283b11b/",
   github: "https://github.com/AyaSox",
   avatar: "/avatar-placeholder.svg",

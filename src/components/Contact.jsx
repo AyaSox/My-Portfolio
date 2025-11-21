@@ -1,18 +1,32 @@
+import React, { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import { about } from '../data/portfolioData';
 
 function Contact() {
+  const form = useRef();
+  const [status, setStatus] = useState(''); // 'sending', 'success', 'error'
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setStatus('sending');
+
+    // REPLACE THESE VALUES WITH YOUR ACTUAL IDS
+    const YOUR_SERVICE_ID = 'YOUR_SERVICE_ID';
+    const YOUR_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
+    const YOUR_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
+
+    emailjs.sendForm(YOUR_SERVICE_ID, YOUR_TEMPLATE_ID, form.current, YOUR_PUBLIC_KEY)
+      .then((result) => {
+          console.log(result.text);
+          setStatus('success');
+          e.target.reset();
+      }, (error) => {
+          console.log(error.text);
+          setStatus('error');
+      });
+  };
+
   const contactLinks = [
-    {
-      name: 'Email',
-      icon: (
-        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-        </svg>
-      ),
-      href: `mailto:${about.email}`,
-      display: about.email,
-      color: 'from-red-500 to-pink-500'
-    },
     {
       name: 'LinkedIn',
       icon: (
@@ -21,7 +35,7 @@ function Contact() {
         </svg>
       ),
       href: about.linkedin,
-      display: 'linkedin.com/in/ayanda-sokhela',
+      display: 'Connect on LinkedIn',
       color: 'from-blue-600 to-blue-700'
     },
     {
@@ -32,8 +46,8 @@ function Contact() {
         </svg>
       ),
       href: about.github,
-      display: 'github.com/ayanda-sokhela',
-      color: 'from-gray-600 to-gray-700'
+      display: 'View Projects',
+      color: 'from-gray-700 to-gray-900'
     }
   ];
 
@@ -46,11 +60,92 @@ function Contact() {
           I am actively seeking employment opportunities where I can apply my HR domain knowledge together with modern .NET and React development skills.
         </p>
         <p className="text-themed-muted">
-          If you have a role that requires HR process understanding and full stack software delivery, or you would like to discuss potential opportunities, please reach out through any of the channels below.
+          If you have a role that requires HR process understanding and full stack software delivery, or you would like to discuss potential opportunities, please reach out through the contact form below or via the channels provided.
         </p>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12">
+      {/* Contact Form */}
+      <div className="max-w-2xl mx-auto mb-12">
+        <div className="card">
+          <h3 className="text-2xl font-bold text-themed-primary mb-6 text-center">Send Me a Message</h3>
+          <form ref={form} onSubmit={sendEmail} className="space-y-4">
+            <div>
+              <label htmlFor="from_name" className="block text-sm font-medium text-themed-secondary mb-2">
+                Your Name
+              </label>
+              <input
+                type="text"
+                id="from_name"
+                name="from_name"
+                required
+                className="w-full px-4 py-2 border border-themed-border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-themed-surface text-themed-primary"
+                placeholder="John Doe"
+              />
+            </div>
+            <div>
+              <label htmlFor="from_email" className="block text-sm font-medium text-themed-secondary mb-2">
+                Your Email
+              </label>
+              <input
+                type="email"
+                id="from_email"
+                name="from_email"
+                required
+                className="w-full px-4 py-2 border border-themed-border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-themed-surface text-themed-primary"
+                placeholder="john@example.com"
+              />
+            </div>
+            <div>
+              <label htmlFor="message" className="block text-sm font-medium text-themed-secondary mb-2">
+                Message
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                required
+                rows="5"
+                className="w-full px-4 py-2 border border-themed-border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-themed-surface text-themed-primary"
+                placeholder="Your message here..."
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              disabled={status === 'sending'}
+              className="w-full btn-primary inline-flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              {status === 'sending' ? (
+                <>
+                  <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                  </svg>
+                  Sending...
+                </>
+              ) : (
+                <>
+                  <svg className="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                  Send Message
+                </>
+              )}
+            </button>
+            {status === 'success' && (
+              <div className="p-4 bg-green-100 dark:bg-green-900 border border-green-400 dark:border-green-700 text-green-700 dark:text-green-100 rounded-lg">
+                Message sent successfully! I'll get back to you soon.
+              </div>
+            )}
+            {status === 'error' && (
+              <div className="p-4 bg-red-100 dark:bg-red-900 border border-red-400 dark:border-red-700 text-red-700 dark:text-red-100 rounded-lg">
+                Failed to send message. Please try again or use an alternative contact method.
+              </div>
+            )}
+          </form>
+        </div>
+      </div>
+
+      {/* Contact Links */}
+      <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-12">
         {contactLinks.map((link, index) => (
           <a
             key={index}
@@ -62,10 +157,10 @@ function Contact() {
             <div className={`w-14 h-14 mb-4 bg-gradient-to-br ${link.color} rounded-lg flex items-center justify-center text-white group-hover:scale-110 transition-transform mx-auto`}>
               {link.icon}
             </div>
-            <h3 className="text-lg font-semibold text-themed-primary mb-2">
+            <h3 className="text-lg font-semibold text-themed-primary mb-2 text-center">
               {link.name}
             </h3>
-            <p className="text-themed-muted text-sm break-all">
+            <p className="text-themed-muted text-sm break-all text-center">
               {link.display}
             </p>
           </a>
@@ -85,15 +180,6 @@ function Contact() {
           <p className="text-themed-muted mb-6">
             I am committed to contributing to a forward thinking team and delivering reliable, maintainable software that supports people centric processes. I would appreciate the opportunity to discuss how I can add value.
           </p>
-          <a 
-            href={`mailto:${about.email}`}
-            className="btn-primary inline-flex"
-          >
-            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-            </svg>
-            Contact Me
-          </a>
         </div>
       </div>
     </section>
