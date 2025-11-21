@@ -10,10 +10,10 @@ function Contact() {
     e.preventDefault();
     setStatus('sending');
 
-    // REPLACE THESE VALUES WITH YOUR ACTUAL IDS
-    const YOUR_SERVICE_ID = 'YOUR_SERVICE_ID';
-    const YOUR_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
-    const YOUR_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
+  
+    const YOUR_SERVICE_ID = 'service_0grvn4p';
+    const YOUR_TEMPLATE_ID = 'template_zb9obql';
+    const YOUR_PUBLIC_KEY = '8dAlLS_4u0mx-z_Td';
 
     emailjs.sendForm(YOUR_SERVICE_ID, YOUR_TEMPLATE_ID, form.current, YOUR_PUBLIC_KEY)
       .then((result) => {
