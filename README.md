@@ -65,7 +65,6 @@ netlify.toml         # Netlify deployment configuration
 - JSON?LD (Person + Website) in index.html
   
 ## Contact
-Email: ayandasokhela492@gmail.com  
 LinkedIn: https://www.linkedin.com/in/ayanda-sokhela-20283b11b/  
 GitHub: https://github.com/AyaSox  
 Location: Gauteng, South Africa
