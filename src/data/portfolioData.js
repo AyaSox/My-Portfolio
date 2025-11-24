@@ -20,7 +20,7 @@ export const projects = [
   {
     id: 3,
     title: "ADS Corp Resource Booking System",
-    summary: "Built to solve resource scheduling conflicts and low visibility across shared assets. Enterprise booking system for rooms, vehicles, and equipment with conflict detection, recurring bookings, usage analytics, and email notifications via MailKit. Features hybrid UI with Razor Pages for CRUD and MVC for dashboards, reports, and calendar views with ICS downloads. Impact: fewer double-bookings, higher utilisation of shared resources, and better forward planning for teams.",
+    summary: "Built to solve resource scheduling conflicts and low visibility across shared assets. Enterprise booking system for rooms, vehicles, and equipment with conflict detection, recurring bookings, and email notifications. Includes utilisation analytics, access control, and reporting to give managers visibility into how shared resources are used. Impact: fewer double-bookings, better utilisation of assets, and clearer accountability.",
     techStack: [".NET 8", "Razor Pages", "MVC", "SQL Server", "EF Core", "MailKit", "Bootstrap 5"],
     github: "https://github.com/AyaSox/ADS-Corp-Resource-Booking",
     demo: "https://resource-booking.onrender.com",
@@ -47,7 +47,7 @@ export const projects = [
   {
     id: 6,
     title: "FamBudget App",
-    summary: "Full-stack family finance manager actively used in our household to help my wife and baby by giving clear visibility into spending and savings. Features income/expense tracking, monthly budgets per category with smart status alerts (Within/Close to Limit/At Budget/Over Budget), savings goals with progress tracking, bill reminders, rich dashboards with Recharts visualisation, period filters (month/quarter/YTD), and Excel-ready CSV exports. Built from a real need to manage medical, baby, and household expenses; now our single source of truth for family budgeting. Impact: consolidated finances in one place, improved on-time bill payments, and more predictable monthly cash flow. Built with clean architecture using .NET 8 API, React TypeScript, Material-UI, and SQLite/PostgreSQL.",
+    summary: "Full-stack family finance manager actively used in our household to help my wife and baby by giving clear visibility into spending and savings. Features income/expense tracking, monthly budgets, category breakdowns, and visual dashboards for trends over time. Includes authentication, role-based access for family members, and responsive UI designed for mobile-first use. Impact: clearer financial decision-making at home, fewer surprises at month-end, and more intentional saving.",
     techStack: [".NET 8 API", "React", "TypeScript", "Material-UI", "PostgreSQL", "Recharts", "EF Core", "Vite"],
     github: "https://github.com/AyaSox/FamBudget-App",
     demo: null,
@@ -166,7 +166,7 @@ export const education = [
 
 export const about = {
   name: "Ayanda Sokhela",
-  title: "HR Professional & Software Developer",
+  title: "HR Professional, HRIS",
   subtitle: ".NET | React | SQL | SAP HCM",
   bio: `I am an experienced HR professional with qualifications in Human Resources and a Bachelor of Commerce in Information Technology and Management. My journey combines deep HR expertise with modern software development skills.
 
@@ -174,7 +174,11 @@ My experience spans the education sector (University of KwaZulu-Natal) and Infor
 
 I am passionate about using technology to create solutions that make work easier and more efficient. This drive led me to develop 8 full-stack applications, including HR management systems, ATS platforms, and resource booking solutions using .NET, React, and SQL technologies. Six of my applications are deployed and accessible via live demos.
 
-I am looking for opportunities to use my technical skills and passion for technology to help build, support, and improve systems and processes in IT and business, while leveraging my extensive HR domain knowledge.`,
+I am open to roles where I can build and support systems – from HRIS and HR Tech Specialist roles, HR Systems Analyst positions, support, through to full-stack .NET / React developer roles – especially where HR domain knowledge is an advantage. I am particularly interested in opportunities that allow me to bridge the gap between HR and technology, whether as a developer, HR systems analyst, or hybrid HRIS specialist.
+
+Open to: HRIS / HR Tech Specialist, HR Systems Analyst, System Support, and Full-Stack .NET / React Developer roles.
+
+Value I bring: deep HR domain expertise combined with hands-on experience building and deploying production-grade HR and business systems, strong understanding of South African labour legislation and compliance, and the ability to translate business requirements into practical, scalable technical solutions.`,
   linkedin: "https://www.linkedin.com/in/ayanda-sokhela-20283b11b/",
   github: "https://github.com/AyaSox",
   avatar: "/avatar-placeholder.svg",
