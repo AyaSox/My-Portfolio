@@ -14,7 +14,10 @@ function Experience() {
             {experience.map((job, index) => (
               <div key={job.id} className={`relative ${index % 2 === 0 ? 'md:ml-0' : 'md:ml-auto'} md:w-1/2`}>
                 {/* Timeline dot */}
-                <div className="absolute left-0 md:left-auto md:right-full md:mr-[-1.125rem] transform md:translate-x-0 w-4 h-4 bg-blue-500 rounded-full border-4 z-10" style={{ borderColor: 'var(--section-bg)' }}></div>
+                <div
+                  className="absolute left-0 md:left-auto md:right-full md:mr-[-1.125rem] transform md:translate-x-0 w-4 h-4 bg-blue-500 rounded-full border-4 z-10"
+                  style={{ borderColor: 'var(--color-bg-surface)' }}
+                ></div>
                 
                 <div className="ml-8 md:ml-0 md:mr-8 card">
                   <div className="flex justify-between items-start mb-3">
@@ -63,7 +66,9 @@ function Experience() {
               </div>
               <div className="text-left">
                 <p className="text-themed-primary font-semibold">Open to New Opportunities</p>
-                <p className="text-themed-muted text-sm">Full-time roles in software development or HR tech</p>
+                <p className="text-themed-muted text-sm">
+                  Roles in HRIS / HR Tech and full-stack .NET / React development, including permanent, contract, and project-based work
+                </p>
               </div>
             </div>
           </div>
