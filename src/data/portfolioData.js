@@ -166,19 +166,20 @@ export const education = [
 
 export const about = {
   name: "Ayanda Sokhela",
-  title: "HR Professional, HRIS",
-  subtitle: ".NET | React | SQL | SAP HCM",
-  bio: `I am an experienced HR professional with qualifications in Human Resources and a Bachelor of Commerce in Information Technology and Management. My journey combines deep HR expertise with modern software development skills.
+  title: "HR Officer | HRIS Specialist | HR Systems Analyst | Full-Stack Developer",
+  subtitle: "Building HR Tech Solutions with .NET, React & SAP HCM",
+  careerStartYear: 2016,
+  bio: `HR professional with 9+ years experience who builds. I've built 8 full-stack HR systems including HRIS, ATS, and leave management platforms. I bridge the gap between what HR needs and what technology can deliver.
 
-My experience spans the education sector (University of KwaZulu-Natal) and Information Technology (Adapt IT). In my current role as a Human Resources Officer at Adapt IT, I work as an assistant to the Senior HR Business Partner, supporting the business by aligning HR initiatives with business goals.
+My experience spans the education sector (University of KwaZulu-Natal) and Information Technology (Adapt IT). In my current role as a Human Resources Officer at Adapt IT, I work as an assistant to the Group HCM Executive across the full employee lifecycle – from recruitment and onboarding to performance management, learning & development, and HR compliance.
 
-I am passionate about using technology to create solutions that make work easier and more efficient. This drive led me to develop 8 full-stack applications, including HR management systems, ATS platforms, and resource booking solutions using .NET, React, and SQL technologies. Six of my applications are deployed and accessible via live demos.
+I am passionate about using technology to create solutions that make work easier and more efficient. This drive led me to develop 8 full-stack applications, including HR management systems, ATS platforms, leave management tools, and offboarding workflows – all built with .NET, React, and SQL technologies.
 
-I am open to roles where I can build and support systems – from HRIS and HR Tech Specialist roles, HR Systems Analyst positions, support, through to full-stack .NET / React developer roles – especially where HR domain knowledge is an advantage. I am particularly interested in opportunities that allow me to bridge the gap between HR and technology, whether as a developer, HR systems analyst, or hybrid HRIS specialist.
+I am open to roles where I can build and support systems – from HRIS and HR Tech Specialist roles, HR Systems Analyst positions, support, through to full-stack .NET / React developer roles – where my blend of HR domain expertise and development skills can add real value.
 
 Open to: HRIS / HR Tech Specialist, HR Systems Analyst, System Support, and Full-Stack .NET / React Developer roles.
 
-Value I bring: deep HR domain expertise combined with hands-on experience building and deploying production-grade HR and business systems, strong understanding of South African labour legislation and compliance, and the ability to translate business requirements into practical, scalable technical solutions.`,
+Value I bring: deep HR domain expertise combined with hands-on experience building and deploying production-grade HR and business systems, strong understanding of South African labour legislation, and a commitment to continuous learning.`,
   linkedin: "https://www.linkedin.com/in/ayanda-sokhela-20283b11b/",
   github: "https://github.com/AyaSox",
   avatar: "/avatar-placeholder.svg",
