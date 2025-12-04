@@ -97,7 +97,7 @@ function Hero() {
             <div className="text-xs text-themed-muted">Live Demos</div>
           </div>
           <div className="text-center">
-            <div className="text-xl font-bold text-purple-500">8+</div>
+            <div className="text-xl font-bold text-purple-500">{new Date().getFullYear() - about.careerStartYear}+</div>
             <div className="text-xs text-themed-muted">Years HR Exp</div>
           </div>
         </div>
